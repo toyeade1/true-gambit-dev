@@ -25,7 +25,7 @@ export function Navbar() {
     document.removeEventListener("click", outsideClickListener);
   });
 
-  const outsideClickListener = (event:Event) => {
+  const outsideClickListener = () => {
     if (isPopupVisible()) {
       setPopupVisible(false);
       document.removeEventListener("click", outsideClickListener);
