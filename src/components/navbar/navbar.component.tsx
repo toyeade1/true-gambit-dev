@@ -2,13 +2,34 @@ import { css } from "../../../styled-system/css";
 import { createSignal } from "solid-js";
 import { container, stack } from "../../../styled-system/patterns";
 import { button } from "../../recipies/button.recipe.tsx";
+import { onCleanup } from "solid-js";
 
 export function Navbar() {
 // here we are creating the getter and the setter
   const [isPopupVisible, setPopupVisible] = createSignal(false);
   // this is a function that will toggle the popup
   const togglePopup = () => {
-    setPopupVisible(!isPopupVisible());
+    if (isPopupVisible()) {
+      setPopupVisible(false);
+      document.removeEventListener("click", outsideClickListener)
+    }
+    else {
+      setPopupVisible(true);
+      setTimeout(()=> {
+        document.addEventListener("click", outsideClickListener)
+      });
+    }
+  };
+
+  onCleanup(() => {
+    document.removeEventListener("click", outsideClickListener);
+  });
+
+  const outsideClickListener = (event:Event) => {
+    if (isPopupVisible()) {
+      setPopupVisible(false);
+      document.removeEventListener("click", outsideClickListener);
+    }
   };
   return (
     <div>
@@ -115,4 +136,5 @@ export function Navbar() {
         )}
     </div>
   );
+
 }
