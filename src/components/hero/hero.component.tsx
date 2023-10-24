@@ -78,7 +78,7 @@ export function Hero() {
       </m.h1>
 
       <video
-        src="https://true-gambit-studio.b-cdn.net/background.mp4"
+        src="https://true-gambit-toye.b-cdn.net/newvid.mp4"
         autoplay={true}
         muted={true}
         loop={true}
