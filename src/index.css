@@ -1,0 +1,9 @@
+@layer reset, base, tokens, recipes, utilities;
+
+@layer base {
+    body {
+        background: black;
+        color: white;
+        overflow-x: hidden;
+    }
+}
