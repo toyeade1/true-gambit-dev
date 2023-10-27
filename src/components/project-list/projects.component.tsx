@@ -127,22 +127,24 @@ export function ProjectList(): JSX.Element {
       isVideo: true,
     },
     {
-      src: "https://true-gambit-studio.b-cdn.net/project-not-exist-1.png",
+      src: "https://true-gambit-toye.b-cdn.net/projects/ComingSoon.mp4",
+      // src: "https://true-gambit-studio.b-cdn.net/project-not-exist-1.png",
       name: "Project 2",
       logo: "",
-      isVideo: false,
+      isVideo: true,
     },
     {
-      src: "https://true-gambit-studio.b-cdn.net/project-not-exist-1.png",
+      src: "https://true-gambit-toye.b-cdn.net/projects/ComingSoon.mp4",
+      // src: "https://true-gambit-studio.b-cdn.net/project-not-exist-1.png",
       name: "Project 2",
       logo: "",
-      isVideo: false,
+      isVideo: true,
     },
     {
-      src: "https://true-gambit-studio.b-cdn.net/project-not-exist-1.png",
+      src: "https://true-gambit-toye.b-cdn.net/projects/ComingSoon.mp4",
       name: "Project 2",
       logo: "",
-      isVideo: false,
+      isVideo: true,
     },
   ];
 
